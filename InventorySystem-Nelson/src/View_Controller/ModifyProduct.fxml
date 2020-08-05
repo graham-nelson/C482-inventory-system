@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="850.0" style="-fx-background-color: #F8F8F7;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="View_Controller.ModifyProductController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="19.0" prefHeight="469.0" prefWidth="820.0" style="-fx-border-radius: 20; -fx-border-color: black;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Button layoutX="718.0" layoutY="201.0" mnemonicParsing="false" onAction="#onActionAddButton" prefWidth="65.0" style="-fx-background-radius: 50;" text="Add">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <TableView fx:id="modifyProductPartTable" layoutX="339.0" layoutY="40.0" prefHeight="150.0" prefWidth="445.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="40.0">
+               <columns>
+                  <TableColumn fx:id="partIdTableView" prefWidth="105.0" text="Part ID" />
+                  <TableColumn fx:id="partNameTableField" prefWidth="113.0" text="Part Name" />
+                  <TableColumn fx:id="partInvTableField" prefWidth="116.0" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceTableField" prefWidth="110.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <TableView fx:id="productPartTableView" layoutX="338.0" layoutY="235.0" prefHeight="150.0" prefWidth="445.0">
+               <columns>
+                  <TableColumn fx:id="productPartIdTableField" prefWidth="105.0" text="Part ID" />
+                  <TableColumn fx:id="productPartNameTableField" prefWidth="113.0" text="Part Name" />
+                  <TableColumn fx:id="productPartInvTableField" prefWidth="116.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPartPriceTableField" prefWidth="110.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="productPartDeleteButton" layoutX="718.0" layoutY="395.0" mnemonicParsing="false" onAction="#onActionDeleteButton" prefWidth="65.0" style="-fx-background-radius: 50;" text="Delete">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyProductCancelButton" layoutX="718.0" layoutY="433.0" mnemonicParsing="false" onAction="#onActionCancelButton" prefWidth="65.0" style="-fx-background-radius: 50;" text="Cancle" AnchorPane.bottomAnchor="15.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyProductSaveButton" layoutX="644.0" layoutY="433.0" mnemonicParsing="false" onAction="#onActionSaveButton" prefWidth="65.0" style="-fx-background-radius: 50;" text="Save" AnchorPane.bottomAnchor="15.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="496.0" layoutY="11.0" mnemonicParsing="false" onAction="#onActionSearchButton" prefWidth="65.0" style="-fx-background-radius: 50;" text="Search" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="modifyProductSearchField" layoutX="570.0" layoutY="11.0" promptText="Part Name/ID" style="-fx-background-radius: 50;" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="44.0" layoutY="64.0" text="Modify Product">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="16.0" layoutY="128.0" prefHeight="50.0" prefWidth="366.0">
+         <children>
+            <TextField fx:id="modifyProductId" disable="true" layoutX="124.0" layoutY="12.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-radius: 50;" text="Auto Gen - Disabled" />
+            <Label layoutX="14.0" layoutY="16.0" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="178.0" prefHeight="50.0" prefWidth="366.0">
+         <children>
+            <TextField fx:id="modifyProductName" layoutX="124.0" layoutY="12.0" promptText="Part Name" style="-fx-background-radius: 50;" />
+            <Label layoutX="14.0" layoutY="16.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="225.0" prefHeight="50.0" prefWidth="366.0">
+         <children>
+            <TextField fx:id="modifyProductInv" layoutX="124.0" layoutY="12.0" promptText="Inv" style="-fx-background-radius: 50;" />
+            <Label layoutX="14.0" layoutY="17.0" text="Inv">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="275.0" prefHeight="50.0" prefWidth="366.0">
+         <children>
+            <TextField fx:id="modifyProductPrice" editable="false" layoutX="124.0" layoutY="12.0" promptText="Price/Cost" style="-fx-background-radius: 50;" />
+            <Label layoutX="14.0" layoutY="17.0" text="Price/Cost">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="325.0" prefHeight="50.0" prefWidth="366.0">
+         <children>
+            <Group layoutX="124.0" layoutY="13.0">
+               <children>
+                  <TextField fx:id="modifyProductMax" prefHeight="27.0" prefWidth="75.0" promptText="Max" style="-fx-background-radius: 50;" />
+                  <TextField fx:id="modifyProductMin" layoutX="83.0" prefHeight="27.0" prefWidth="75.0" promptText="Min" style="-fx-background-radius: 50;" />
+               </children>
+            </Group>
+            <Label layoutX="14.0" layoutY="17.0" text="Max/Min">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
