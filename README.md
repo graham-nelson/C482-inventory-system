@@ -1,4 +1,4 @@
-# C482-InventorySystem-
+# C482-inventory-system
 
 Final project for WGU-C481 Software 1 course.
 
